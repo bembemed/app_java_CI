@@ -17,7 +17,7 @@ pipeline {
                     withSonarQubeEnv(credentialsId: 'sonar-text') {
                         sh 'pwd'
                         sh 'echo $USER'
-                        sh 'mvn -Dmaven.repo.local=/var/lib/jenkins/.m2/repository  clean package sonar:sonar'
+                        sh 'mvn -Dmaven.repo.local=/var/lib/jenkins/.m2/repository/  clean package sonar:sonar'
                         // sh 'mvn -e -X -Dmaven.repo.local=/var/lib/jenkins/.m2/repository  clean package sonar:sonar'
                     }
                 }
